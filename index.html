@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmunoGenix - ImmunoReset Digital Platform</title>
+    <title>Recellion - ImmunoReset Digital Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Base styles */
         * {
@@ -14,7 +15,7 @@
 
         body {
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(135deg, #fffaf0 0%, #ffeec2 100%); /* Lighter orange/cream background */
             min-height: 100vh;
             color: #334155;
         }
@@ -29,7 +30,7 @@
             width: 280px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-right: 1px solid rgba(148, 163, 184, 0.2);
+            border-right: 1px solid rgba(255, 165, 0, 0.2); /* Orange border */
             padding: 2rem 1rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
@@ -39,7 +40,7 @@
             text-align: center;
             margin-bottom: 2.5rem;
             padding: 1rem;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
             border-radius: 16px;
             color: white;
             transform: translateZ(0);
@@ -83,15 +84,15 @@
         }
 
         .nav-link:hover {
-            background: rgba(59, 130, 246, 0.08);
-            color: #3b82f6;
+            background: rgba(255, 140, 0, 0.08); /* Dark Orange hover color */
+            color: #FF8C00; /* Dark Orange color */
             transform: translateX(4px);
         }
 
         .nav-link.active {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
             color: white;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
             transform: translateX(4px);
         }
 
@@ -110,7 +111,7 @@
             flex: 1;
             padding: 2rem;
             overflow-y: auto;
-            background: rgba(248, 250, 252, 0.5);
+            background: rgba(255, 250, 240, 0.5); /* Lighter cream background for content */
         }
 
         .header {
@@ -119,7 +120,7 @@
             border-radius: 20px;
             padding: 2rem;
             margin-bottom: 2rem;
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
@@ -168,7 +169,7 @@
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2rem;
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -182,7 +183,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+            background: linear-gradient(90deg, #FF8C00, #FF4500, #FFD700); /* Orange gradient */
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -203,13 +204,13 @@
         }
 
         .card-icon {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
             border-radius: 16px;
             padding: 1rem;
             margin-right: 1rem;
             font-size: 1.5rem;
             color: white;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -241,19 +242,19 @@
         }
 
         .status-green {
-            background: linear-gradient(135deg, #10b981, #34d399);
+            background: linear-gradient(135deg, #10b981, #34d399); /* Keep green for success */
             color: white;
             box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
         }
 
         .status-yellow {
-            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            background: linear-gradient(135deg, #f59e0b, #fbbf24); /* Keep yellow for warning */
             color: white;
             box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
         }
 
         .status-red {
-            background: linear-gradient(135deg, #ef4444, #f87171);
+            background: linear-gradient(135deg, #ef4444, #f87171); /* Keep red for alert */
             color: white;
             box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
         }
@@ -261,7 +262,7 @@
         .progress-bar {
             width: 100%;
             height: 12px;
-            background: rgba(148, 163, 184, 0.2);
+            background: rgba(255, 165, 0, 0.2); /* Lighter orange background */
             border-radius: 8px;
             overflow: hidden;
             margin: 1rem 0;
@@ -270,7 +271,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(90deg, #FF8C00, #FF4500); /* Orange gradient */
             border-radius: 8px;
             transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -295,8 +296,8 @@
         /* Buttons */
         .btn {
             background: rgba(255, 255, 255, 0.8);
-            color: #3b82f6;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #FF8C00; /* Dark Orange color */
+            border: 1px solid rgba(255, 140, 0, 0.2);
             padding: 0.8rem 1.5rem;
             border-radius: 12px;
             cursor: pointer;
@@ -309,22 +310,22 @@
         }
 
         .btn:hover {
-            background: #3b82f6;
+            background: #FF8C00; /* Dark Orange color */
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
             color: white;
             border: none;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
         }
 
         /* Dashboard specific styles */
@@ -340,7 +341,7 @@
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2rem;
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             height: 320px;
             display: flex;
@@ -362,11 +363,11 @@
         }
 
         .patient-item {
-            background: rgba(248, 250, 252, 0.8);
+            background: rgba(255, 250, 240, 0.8); /* Lighter cream background */
             border-radius: 12px;
             padding: 1.2rem;
             margin-bottom: 1rem;
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
             transition: all 0.3s ease;
             cursor: pointer;
         }
@@ -407,7 +408,7 @@
             width: 100%;
             padding: 1rem;
             border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.3);
+            border: 1px solid rgba(255, 165, 0, 0.3); /* Orange border */
             background: rgba(255, 255, 255, 0.8);
             color: #374151;
             backdrop-filter: blur(10px);
@@ -417,9 +418,9 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #3b82f6;
+            border-color: #FF8C00; /* Dark Orange color */
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
         }
 
         .form-input::placeholder {
@@ -444,15 +445,21 @@
         }
 
         .alert-warning {
-            background: rgba(254, 240, 138, 0.3);
+            background: rgba(254, 240, 138, 0.3); /* Keep yellow for warning */
             border-color: rgba(245, 158, 11, 0.3);
             color: #92400e;
         }
 
         .alert-success {
-            background: rgba(167, 243, 208, 0.3);
+            background: rgba(167, 243, 208, 0.3); /* Keep green for success */
             border-color: rgba(16, 185, 129, 0.3);
             color: #065f46;
+        }
+
+        .alert-info {
+            background: rgba(255, 215, 0, 0.3); /* Gold color for info */
+            border-color: rgba(255, 165, 0, 0.3); /* Orange border for info */
+            color: #8B4513; /* SaddleBrown for text */
         }
 
         .alert-icon {
@@ -462,18 +469,18 @@
 
         /* Education section */
         .education-video {
-            background: rgba(15, 23, 42, 0.05);
+            background: rgba(255, 165, 0, 0.05); /* Light orange background */
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
             margin-bottom: 1rem;
-            border: 2px dashed rgba(148, 163, 184, 0.3);
+            border: 2px dashed rgba(255, 165, 0, 0.3); /* Orange dashed border */
             transition: all 0.3s ease;
         }
 
         .education-video:hover {
-            border-color: #3b82f6;
-            background: rgba(59, 130, 246, 0.05);
+            border-color: #FF8C00; /* Dark Orange color */
+            background: rgba(255, 140, 0, 0.05); /* Dark Orange color */
         }
 
         .video-placeholder {
@@ -491,10 +498,10 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: #1e293b;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
         }
 
         .metric-label {
@@ -528,6 +535,78 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Recellion's interactive elements */
+        .interactive-demo {
+            background: #fffaf0; /* Lighter cream background */
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .demo-button {
+            background: linear-gradient(45deg, #FF8C00, #FF4500); /* Orange gradient */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 10px;
+        }
+
+        .demo-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+        }
+
+        .demo-result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .cost-calculator {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin: 2rem auto; /* Center it */
+            max-width: 600px; /* Limit width */
+        }
+
+        .calculator-input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #fffaf0; /* Lighter cream background */
+            border-radius: 10px;
+        }
+
+        .calculator-input input {
+            border: none;
+            background: transparent;
+            font-size: 1.1rem;
+            width: 100px;
+            text-align: right;
+            outline: none;
+        }
+
+        .calculator-result {
+            background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%); /* Orange gradient */
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .app-container {
@@ -554,51 +633,63 @@
     <div class="app-container">
         <aside class="sidebar">
             <div class="logo">
-                <h1>ImmunoGenix</h1>
+                <h1>Recellion</h1>
                 <p>ImmunoReset Digital Platform</p>
             </div>
             <nav>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" onclick="showSection('dashboard')">
-                            <span class="nav-icon">📊</span>
+                            <span class="nav-icon"><i class="fas fa-chart-line"></i></span>
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('screening')">
-                            <span class="nav-icon">🔍</span>
+                            <span class="nav-icon"><i class="fas fa-search"></i></span>
                             Patient Screening
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('logistics')">
-                            <span class="nav-icon">📅</span>
+                            <span class="nav-icon"><i class="fas fa-calendar-alt"></i></span>
                             Therapy Logistics
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('monitoring')">
-                            <span class="nav-icon">🚨</span>
+                            <span class="nav-icon"><i class="fas fa-bell"></i></span>
                             Adverse Event Monitoring
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('analytics')">
-                            <span class="nav-icon">📈</span>
+                            <span class="nav-icon"><i class="fas fa-chart-bar"></i></span>
                             Clinical Insights
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('resources')">
-                            <span class="nav-icon">🎓</span>
+                            <span class="nav-icon"><i class="fas fa-graduation-cap"></i></span>
                             Patient & HCP Resources
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link" onclick="showSection('sostac')">
-                            <span class="nav-icon">🎯</span>
+                            <span class="nav-icon"><i class="fas fa-bullseye"></i></span>
                             SOSTAC Framework
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showSection('cost_comparison')">
+                            <span class="nav-icon"><i class="fas fa-calculator"></i></span>
+                            Cost Comparison
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showSection('treatment_process_demo')">
+                            <span class="nav-icon"><i class="fas fa-microscope"></i></span>
+                            Treatment Process Demo
                         </a>
                     </li>
                 </ul>
@@ -609,16 +700,16 @@
             <section id="dashboard" class="content-section active">
                 <div class="header">
                     <h2>Dashboard Overview</h2>
-                    <p>Real-time insights into ImmunoReset therapy management across your facility.</p>
+                    <p>Real-time insights into Recellion ImmunoReset therapy management across your facility.</p>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">🏥</div>
+                            <div class="card-icon"><i class="fas fa-hospital-user"></i></div>
                             <div>
                                 <h3>Patients in Active Treatment</h3>
-                                <p>Currently undergoing ImmunoReset therapy</p>
+                                <p>Currently undergoing Recellion ImmunoReset therapy</p>
                             </div>
                         </div>
                         <div class="metric-card">
@@ -630,9 +721,9 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">⚗️</div>
+                            <div class="card-icon"><i class="fas fa-flask"></i></div>
                             <div>
-                                <h3>ImmunoReset Manufacturing</h3>
+                                <h3>Recellion Manufacturing</h3>
                                 <p>mRNA CAR-T production pipeline status</p>
                             </div>
                         </div>
@@ -645,10 +736,10 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">⚠️</div>
+                            <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
                             <div>
                                 <h3>Adverse Event Alerts</h3>
-                                <p>Real-time toxicity monitoring</p>
+                                <p>Real-time toxicity monitoring for Recellion therapy</p>
                             </div>
                         </div>
                         <div class="metric-card">
@@ -660,10 +751,10 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">📈</div>
+                            <div class="card-icon"><i class="fas fa-percent"></i></div>
                             <div>
                                 <h3>3-Month Remission Rate</h3>
-                                <p>Initial efficacy post-ImmunoReset infusion</p>
+                                <p>Initial efficacy post-Recellion ImmunoReset infusion</p>
                             </div>
                         </div>
                         <div class="metric-card">
@@ -677,16 +768,16 @@
                 <div class="dashboard-grid">
                     <div class="chart-container">
                         <h3 style="margin-bottom: 1rem; color: #1e293b;">Treatment Journey Progress</h3>
-                        <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Visual timeline of patient therapy stages</p>
-                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #e0e7ff, #c7d2fe); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #3730a3;">
+                        <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Visual timeline of patient therapy stages for Recellion</p>
+                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #ffe0b2, #ffd700); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #a0522d;">
                             📊 Treatment Journey Chart Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">View Full Timeline</button>
                     </div>
                     <div class="chart-container">
                         <h3 style="margin-bottom: 1rem; color: #1e293b;">Toxicity Trend Analysis</h3>
-                        <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Aggregate view of adverse event reporting</p>
-                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #92400e;">
+                        <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Aggregate view of adverse event reporting for Recellion</p>
+                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #ffdab9, #ffa07a); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #8b4513;">
                             🛡️ Adverse Event Graph Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Detailed Safety Report</button>
@@ -697,18 +788,18 @@
             <section id="screening" class="content-section">
                 <div class="header">
                     <h2>Patient Screening & Enrollment</h2>
-                    <p>Streamlined assessment for refractory SLE and RA patients for ImmunoReset therapy.</p>
+                    <p>Streamlined assessment for refractory SLE and RA patients for Recellion ImmunoReset therapy.</p>
                 </div>
 
                 <div class="alert alert-success">
-                    <span class="alert-icon">✓</span>
-                    <span>5 new patient referrals in review for ImmunoReset eligibility.</span>
+                    <span class="alert-icon"><i class="fas fa-check-circle"></i></span>
+                    <span>5 new patient referrals in review for Recellion eligibility.</span>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card">
                         <h3>Eligibility Questionnaire</h3>
-                        <p>Complete assessment based on ImmunoGenix clinical criteria.</p>
+                        <p>Complete assessment based on Recellion clinical criteria.</p>
                         
                         <div class="form-group">
                             <label class="form-label">Patient ID</label>
@@ -733,8 +824,8 @@
                     </div>
 
                     <div class="card">
-                        <h3>ImmunoReset Candidates</h3>
-                        <p>Patients meeting initial screening criteria for ImmunoReset.</p>
+                        <h3>Recellion Candidates</h3>
+                        <p>Patients meeting initial screening criteria for Recellion ImmunoReset.</p>
                         
                         <ul class="patient-list">
                             <li class="patient-item" onclick="showPatientDetails('IMX-003')">
@@ -766,15 +857,15 @@
             <section id="logistics" class="content-section">
                 <div class="header">
                     <h2>Therapy Logistics & Scheduling</h2>
-                    <p>Optimize scheduling with real-time ImmunoReset production status and appointment management.</p>
+                    <p>Optimize scheduling with real-time Recellion production status and appointment management.</p>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">🏭</div>
+                            <div class="card-icon"><i class="fas fa-industry"></i></div>
                             <div>
-                                <h3>ImmunoReset Production Pipeline</h3>
+                                <h3>Recellion Production Pipeline</h3>
                                 <p>mRNA CAR-T manufacturing status for upcoming infusions.</p>
                             </div>
                         </div>
@@ -798,16 +889,16 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <div class="card-icon">📅</div>
+                            <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
                             <div>
-                                <h3>Upcoming ImmunoReset Appointments</h3>
+                                <h3>Upcoming Recellion Appointments</h3>
                                 <p>Leukapheresis, infusion, and follow-up scheduling.</p>
                             </div>
                         </div>
                         
                         <div style="color: #334155; margin: 1.5rem 0; line-height: 1.8;">
                             <div style="font-weight: 600; color: #1e293b; margin-bottom: 1rem;">Today - May 29, 2025</div>
-                            <div style="margin-bottom: 0.5rem;">• 09:00 - Patient IMX-003 ImmunoReset Infusion</div>
+                            <div style="margin-bottom: 0.5rem;">• 09:00 - Patient IMX-003 Recellion Infusion</div>
                             <div style="margin-bottom: 1rem;">• 14:00 - Patient IMX-005 1-Month Follow-up (RA)</div>
                             
                             <div style="font-weight: 600; color: #1e293b; margin-bottom: 1rem;">Tomorrow - May 30, 2025</div>
@@ -821,7 +912,7 @@
                 </div>
 
                 <div class="alert alert-warning">
-                    <span class="alert-icon">⚠️</span>
+                    <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
                     <span>Reminder: Patient IMX-009 leukapheresis scheduled for tomorrow 10:00 AM.</span>
                 </div>
             </section>
@@ -829,11 +920,11 @@
             <section id="monitoring" class="content-section">
                 <div class="header">
                     <h2>Adverse Event Monitoring & Symptom Tracking</h2>
-                    <p>Real-time patient monitoring with early detection of CAR-T related toxicities (CRS, ICANS).</p>
+                    <p>Real-time patient monitoring with early detection of CAR-T related toxicities (CRS, ICANS) for Recellion therapy.</p>
                 </div>
 
                 <div class="alert alert-warning">
-                    <span class="alert-icon">🚨</span>
+                    <span class="alert-icon"><i class="fas fa-exclamation-circle"></i></span>
                     <span>Alert: Patient IMX-003 reported fever (38.5°C) and mild headache - possible Grade 1 CRS.</span>
                 </div>
 
@@ -865,7 +956,7 @@
 
                     <div class="card">
                         <h3>Report New Symptom</h3>
-                        <p>Submit real-time symptom updates for patients.</p>
+                        <p>Submit real-time symptom updates for patients receiving Recellion therapy.</p>
                         <div class="form-group">
                             <label class="form-label">Patient ID</label>
                             <input type="text" class="form-input" placeholder="Enter patient ID (e.g., IMX-003)">
@@ -886,38 +977,38 @@
             <section id="analytics" class="content-section">
                 <div class="header">
                     <h2>Clinical Insights & Analytics</h2>
-                    <p>Data-driven insights into ImmunoReset efficacy, safety, and patient outcomes.</p>
+                    <p>Data-driven insights into Recellion ImmunoReset efficacy, safety, and patient outcomes.</p>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card">
                         <h3>Long-Term Remission Rates</h3>
-                        <p>Track sustained remission in SLE and RA patients post-ImmunoReset.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #d1e7dd, #b8dbc7); color: #0f5132;">
+                        <p>Track sustained remission in SLE and RA patients post-Recellion ImmunoReset.</p>
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffe0b2, #ffd700); color: #a0522d;">
                             📊 Remission Rate Chart Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Generate Report</button>
                     </div>
                     <div class="card">
                         <h3>Adverse Event Trends</h3>
-                        <p>Analyze patterns and frequency of CAR-T related toxicities.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffeeba, #ffe082); color: #856404;">
+                        <p>Analyze patterns and frequency of CAR-T related toxicities for Recellion.</p>
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffdab9, #ffa07a); color: #8b4513;">
                             📈 AE Trend Chart Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">View Detailed Analysis</button>
                     </div>
                     <div class="card">
                         <h3>Patient Reported Outcomes (PROs)</h3>
-                        <p>Aggregate patient quality of life and symptom burden data.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #cfe2ff, #a0c7ff); color: #004085;">
+                        <p>Aggregate patient quality of life and symptom burden data for Recellion patients.</p>
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffe0b2, #ffd700); color: #a0522d;">
                             📝 PROs Data Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Access PRO Dashboard</button>
                     </div>
                     <div class="card">
                         <h3>Cost-Effectiveness Modeling</h3>
-                        <p>Comparative analysis of ImmunoReset vs. lifelong biologics.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #f0e6f2, #e0d1e5); color: #6a008a;">
+                        <p>Comparative analysis of Recellion ImmunoReset vs. lifelong biologics.</p>
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffdab9, #ffa07a); color: #8b4513;">
                             💰 Cost Model Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Run Simulations</button>
@@ -928,39 +1019,39 @@
             <section id="resources" class="content-section">
                 <div class="header">
                     <h2>Patient & HCP Resources</h2>
-                    <p>Comprehensive educational materials and support for ImmunoReset therapy.</p>
+                    <p>Comprehensive educational materials and support for Recellion ImmunoReset therapy.</p>
                 </div>
 
                 <div class="cards-grid">
                     <div class="card">
-                        <h3>ImmunoReset Patient Guide</h3>
-                        <p>Understand your CAR-T journey, what to expect, and how to manage symptoms.</p>
+                        <h3>Recellion Patient Guide</h3>
+                        <p>Understand your CAR-T journey, what to expect, and how to manage symptoms with Recellion.</p>
                         <div class="education-video" style="margin-top: 1.5rem;">
-                            <span class="video-placeholder">▶️ ImmunoReset Patient Journey Video</span>
+                            <span class="video-placeholder"><i class="fas fa-play-circle"></i> Recellion Patient Journey Video</span>
                         </div>
                         <button class="btn btn-primary">Download Patient Handbook</button>
                     </div>
                     <div class="card">
                         <h3>Healthcare Professional Training</h3>
-                        <p>Modules on ImmunoReset administration, toxicity management, and patient selection.</p>
+                        <p>Modules on Recellion ImmunoReset administration, toxicity management, and patient selection.</p>
                         <div class="education-video" style="margin-top: 1.5rem;">
-                            <span class="video-placeholder">🧑‍⚕️ HCP Training Module Video</span>
+                            <span class="video-placeholder"><i class="fas fa-user-md"></i> HCP Training Module Video</span>
                         </div>
                         <button class="btn btn-primary">Access Training Portal</button>
                     </div>
                     <div class="card">
                         <h3>Frequently Asked Questions (FAQs)</h3>
-                        <p>Answers to common questions about ImmunoReset therapy for patients and caregivers.</p>
+                        <p>Answers to common questions about Recellion ImmunoReset therapy for patients and caregivers.</p>
                         <ul class="patient-list" style="margin-top: 1.5rem;">
                             <li class="patient-item">What is mRNA CAR-T therapy?</li>
-                            <li class="patient-item">How long does remission last?</li>
-                            <li class="patient-item">What are the potential side effects?</li>
+                            <li class="patient-item">How long does remission last with Recellion?</li>
+                            <li class="patient-item">What are the potential side effects of Recellion?</li>
                         </ul>
                         <button class="btn btn-primary">View All FAQs</button>
                     </div>
                     <div class="card">
                         <h3>Support Group Information</h3>
-                        <p>Connect with other patients and families navigating autoimmune CAR-T therapy.</p>
+                        <p>Connect with other patients and families navigating Recellion autoimmune CAR-T therapy.</p>
                         <ul class="patient-list" style="margin-top: 1.5rem;">
                             <li class="patient-item">Online Forums</li>
                             <li class="patient-item">Local Meetups</li>
@@ -973,7 +1064,7 @@
 
             <section id="sostac" class="content-section sostac-section">
                 <div class="header">
-                    <h2>ImmunoGenix: SOSTAC® Marketing Framework for ImmunoReset</h2>
+                    <h2>Recellion: SOSTAC® Marketing Framework for ImmunoReset</h2>
                     <p>Our strategic approach to launching ImmunoReset, an off-the-shelf mRNA CAR-T therapy for refractory SLE and RA in the EU market.</p>
                 </div>
 
@@ -981,24 +1072,30 @@
                     <div class="card">
                         <h3>1. Situation Analysis (Where are we now?)</h3>
                         <p>
-                            The autoimmune market, particularly for SLE and RA, presents significant unmet needs for refractory patients who fail existing therapies. Current treatments often involve lifelong biologics with high costs and varying remission rates. ImmunoReset, as a potential one-time curative mRNA CAR-T therapy, offers a unique value proposition.
+                            The autoimmune market, particularly for SLE and RA, presents significant unmet needs for refractory patients who fail existing therapies. Current treatments often involve lifelong biologics with high costs and varying remission rates. Recellion ImmunoReset, as a potential one-time curative mRNA CAR-T therapy, offers a unique value proposition.
                         </p>
                         <ul>
-                            <li>**Market Size:** Significant patient populations in EU for refractory SLE (~200,000) and RA (~600,000).</li>
-                            <li>**Competitive Landscape:** Emerging CAR-T therapies (autologous/allogeneic) but ImmunoReset's off-the-shelf mRNA approach is a key differentiator.</li>
-                            <li>**Internal Capabilities:** Strong R&D, promising preclinical data, and a scalable manufacturing process for mRNA-LNP.</li>
+                            <li>**Market Size:** EU refractory SLE (~200,000) and RA (~600,000) patient populations.</li>
+                            <li>**Competitive Landscape:** Direct CAR-T competitors include Allogene, Kyverna, Cabaletta Bio, Atara, and Capstan Therapeutics. Established treatments for SLE include Belimumab, Anifrolumab, Voclosporin, and Rituximab. For RA, TNF inhibitors, IL-6 targeting drugs, JAK inhibitors, Abatacept, Rituximab, and Anakinra are prevalent.</li>
+                            <li>**Recellion's Competitive Advantages:** Off-the-shelf availability, no lymphodepletion, scalable manufacturing, and first-to-market in EU.</li>
+                            <li>**Customer Segments:** Rheumatoid Arthritis (RA) refractory patients, Systemic Lupus Erythematosus (SLE) patients (moderate, severe), Cell therapy hospitals/centers, Health insurers and payers.</li>
                         </ul>
                     </div>
 
                     <div class="card">
                         <h3>2. Objectives (Where do we want to be?)</h3>
                         <p>
-                            Our primary objective is to successfully introduce ImmunoReset into the EU market, establishing it as a leading therapeutic option for refractory autoimmune diseases.
+                            Our primary objective is to successfully introduce Recellion ImmunoReset into the EU market, establishing it as a leading therapeutic option for refractory autoimmune diseases.
                         </p>
                         <ul>
-                            <li>**Regulatory:** Achieve EMA Marketing Authorization (MA) for ImmunoReset by Q2 2029.</li>
-                            <li>**Market Penetration:** Secure 5% market share in the refractory SLE/RA segment in key EU countries within 3 years post-launch.</li>
-                            <li>**Clinical Adoption:** Enroll 100 patients in Phase 2 clinical trials by Q4 2026.</li>
+                            <li>**Regulatory:** Achieve EMA Marketing Authorization (MA) for Recellion ImmunoReset by Q2 2029.</li>
+                            <li>**Market Penetration (Year 1):** 25 certified CAR-T centers in 8 EU countries.</li>
+                            <li>**Market Expansion (Year 2):** 50 certified centers in 12 EU countries.</li>
+                            <li>**Patient Treatment (Year 1):** 200 patients (120 RA, 80 SLE).</li>
+                            <li>**Patient Volume (Year 2):** 500 patients annually (300 RA, 200 SLE).</li>
+                            <li>**Market Leadership (Year 2):** 10% market share in eligible population.</li>
+                            <li>**Revenue (Year 1):** ~$12M.</li>
+                            <li>**Revenue (Year 2):** ~$28-40M.</li>
                             <li>**Safety Profile:** Maintain a favorable safety profile with Grade 3+ CRS/ICANS rates below 10% in clinical trials.</li>
                         </ul>
                     </div>
@@ -1009,9 +1106,10 @@
                             Our strategy centers on demonstrating superior efficacy and safety, leveraging our off-the-shelf advantage, and building strong relationships with key stakeholders.
                         </p>
                         <ul>
-                            <li>**Target Audience:** Focus on rheumatologists and immunologists, and refractory SLE/RA patients.</li>
-                            <li>**Positioning:** ImmunoReset as a "one-time immune reset" offering durable remission and improved quality of life, contrasting with chronic therapies.</li>
-                            <li>**Differentiation:** Emphasize the off-the-shelf nature, avoidance of lymphodepletion, and potential for broader accessibility compared to autologous therapies.</li>
+                            <li>**Positioning Strategy:** Position as "The First Potential Cure for Autoimmune Diseases," emphasizing a paradigm shift from chronic management to a curative treatment. Highlight visible advantages of the off-the-shelf approach.</li>
+                            <li>**Target Market Segmentation:** Focus on refractory RA patients (failed all biologics), moderate-to-severe SLE patients (organ involvement). Tertiary autoimmune medical centers and CAR-T centers.</li>
+                            <li>**Go-to-Market Strategy:** Take a hub-and-spoke model, starting with major academic centers. Prioritize market education, optimize patient journey, and engage payers proactively with health economics deliverables.</li>
+                            <li>**Communication Strategy:** Differentiate against CAR-T competitors and established biologics. Emphasize Recellion's advantage and safety profile (no lymphodepletion and an off-the-shelf approach). Leverage thought leadership and digital engagement.</li>
                         </ul>
                     </div>
 
@@ -1023,9 +1121,11 @@
                         <ul>
                             <li>**Clinical Development:** Conduct robust Phase 2/3 trials with clear endpoints for remission and safety.</li>
                             <li>**Regulatory Engagement:** Proactive engagement with EMA (Scientific Advice, PRIME designation) to streamline approval process.</li>
-                            <li>**HCP Education:** Develop comprehensive training programs and digital tools (like this platform) for clinicians on patient selection, administration, and AE management.</li>
+                            <li>**HCP Education:** Develop comprehensive training programs and digital tools (like this platform) for clinicians on patient selection, administration, and AE management. Physician Training (Year 1): 150 rheumatologists/immunologists. Physician Network (Year 2): 350 trained physicians total.</li>
                             <li>**Patient Advocacy:** Partner with patient organizations to raise awareness and provide support.</li>
-                            <li>**Market Access:** Develop health economics models demonstrating long-term cost-effectiveness compared to current standards of care.</li>
+                            <li>**Market Access:** Develop health economics models demonstrating long-term cost-effectiveness compared to current standards of care. Reimbursement (Year 1): Germany, France, UK approvals.</li>
+                            <li>**Content Marketing Tactics:** Create compelling and rich content providing our team with a differentiated narrative. Develop educational content, internal/external patient journey animations and patient selection guidelines. Share data/publication in peer-review journals and medical conferences. Publish white papers on health economics and real-world evidence. Provide treatment algorithm guides for physicians.</li>
+                            <li>**Sales & Distribution Tactics:** Deploy limited European launch (initial 8 EU countries). Engage specialized key opinion leaders. Provide patient navigation support to treatment pathways. Ensure seamless distribution through specialized pharmacy and supply chain networks.</li>
                         </ul>
                     </div>
 
@@ -1040,6 +1140,8 @@
                             <li>**Q3 2028:** MAA submission to EMA.</li>
                             <li>**Q2 2029:** EC decision & anticipated launch in initial EU markets.</li>
                             <li>**Ongoing:** Manufacturing scale-up, HCP training rollout, patient support program development.</li>
+                            <li>**Year 1 Milestones:** CTA, GMP Setup.</li>
+                            <li>**Year 2 Milestones:** Reimbursement, MAA.</li>
                         </ul>
                     </div>
 
@@ -1049,6 +1151,9 @@
                             Key Performance Indicators (KPIs) and monitoring mechanisms to track progress and adjust our plan.
                         </p>
                         <ul>
+                            <li>**Measurement & Monitoring:** Utilize real-time dashboard (1-3 month), surveys (physician training, patient numbers, website engagement and quarterly HCP feedback on platform and reimbursement), as well as annual medical review (includes nurses, pharmacists, and treated patients, physician satisfaction and health economic analysis).</li>
+                            <li>**Process Review & Feedback:** Conduct weekly team standups, monthly management reviews, and quarterly business reviews. Gather physician feedback (in-clinic and surveys/boards) and patient feedback (through surveys and advocacy groups). Monitor competitive intelligence (monthly), quality, and sustainability.</li>
+                            <li>**Outcome Metrics Summary:** Year 1: 25 centers in 8 EU countries, 150 trained physicians, 200 treated patients, 70% physician awareness, 3 reimbursement decisions. Year 2: 50 centers in 12 EU countries, 350 trained physicians, 500 treated patients, 10% market share, 2-year durability data publication. Established as standard of care, multiple indications (~100) provide annual global exposure.</li>
                             <li>**Clinical:** Remission rates (3-month, 6-month, 12-month), adverse event reporting (CRS, ICANS incidence), patient reported outcomes (PROs).</li>
                             <li>**Regulatory:** EMA approval timeline adherence, number of regulatory queries.</li>
                             <li>**Commercial:** Market share in target EU countries, number of certified treatment centers, patient enrollment rates.</li>
@@ -1058,6 +1163,55 @@
                     </div>
                 </div>
             </section>
+
+            <section id="cost_comparison" class="content-section">
+                <div class="header">
+                    <h2>Treatment Cost Comparison</h2>
+                    <p>Compare lifetime costs: Traditional biologics vs. Recellion's one-time CAR-T therapy</p>
+                </div>
+
+                <div class="interactive-demo">
+                    <div class="cost-calculator">
+                        <div class="calculator-input">
+                            <span>Traditional Treatment (Annual):</span>
+                            <span>$<input type="number" id="traditional-cost" value="25000"> × <input type="number" id="years" value="10"> years</span>
+                        </div>
+                        <div class="calculator-input">
+                            <span>Recellion CAR-T (One-time):</span>
+                            <span>$<input type="number" id="cart-cost" value="50000"></span>
+                        </div>
+                        <button class="demo-button" onclick="calculateCost()">Calculate Savings</button>
+                        <div class="calculator-result" id="cost-result" style="display: none;">
+                            <h3>Potential Savings: $<span id="savings">0</span></h3>
+                            <p>Over a 10-year period</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="treatment_process_demo" class="content-section">
+                <div class="header">
+                    <h2>Treatment Process Demo</h2>
+                    <p>Explore the mRNA-LNP CAR-T Treatment Process step-by-step.</p>
+                </div>
+
+                <div style="margin-top: 3rem; text-align: center;">
+                    <button class="demo-button" onclick="showTreatmentProcess()">Show Treatment Process</button>
+                    <div class="demo-result" id="treatment-process">
+                        <h3>mRNA-LNP CAR-T Treatment Process</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="treatment-progress"></div>
+                        </div>
+                        <div id="treatment-steps">
+                            <p><strong>Step 1:</strong> Nanoparticles deliver αCD19-CAR and αCD8 to T cells</p>
+                            <p><strong>Step 2:</strong> T cells initiate CAR expression in the nucleus</p>
+                            <p><strong>Step 3:</strong> Autoreactive cells are targeted and eliminated</p>
+                            <p><strong>Result:</strong> Immune system is reset, achieving potential remission</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
     </div>
 
@@ -1092,12 +1246,12 @@
         // Placeholder functions for button actions (can be expanded with actual logic)
         function runEligibilityCheck() {
             // In a real application, this would send data to a backend for eligibility assessment
-            console.log("Running eligibility check...");
+            console.log("Running eligibility check for Recellion...");
             // Example: Display a temporary message
             const eligibilitySection = document.getElementById('screening');
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-success';
-            alertDiv.innerHTML = '<span class="alert-icon">💡</span><span>Eligibility check initiated. Results will be displayed here soon.</span>';
+            alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-lightbulb"></i></span><span>Eligibility check initiated. Results will be displayed here soon.</span>';
             eligibilitySection.insertBefore(alertDiv, eligibilitySection.children[1]); // Insert after header
             setTimeout(() => alertDiv.remove(), 3000); // Remove message after 3 seconds
         }
@@ -1108,14 +1262,11 @@
             const patientDetails = `
                 Patient ID: ${patientId}<br>
                 Diagnosis: ${patientId.includes('SLE') ? 'Systemic Lupus Erythematosus' : 'Rheumatoid Arthritis'}<br>
-                Current Status: Active Treatment
+                Current Status: Active Treatment with Recellion
             `;
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-info'; // Using info for demonstration
-            alertDiv.style.backgroundColor = 'rgba(173, 216, 230, 0.3)'; /* Light blue */
-            alertDiv.style.borderColor = 'rgba(70, 130, 180, 0.3)'; /* Steel blue */
-            alertDiv.style.color = '#2F4F4F'; /* Dark slate gray */
-            alertDiv.innerHTML = `<span class="alert-icon">ℹ️</span><span>${patientDetails}</span>`;
+            alertDiv.innerHTML = `<span class="alert-icon"><i class="fas fa-info-circle"></i></span><span>${patientDetails}</span>`;
             
             const screeningSection = document.getElementById('screening');
             screeningSection.insertBefore(alertDiv, screeningSection.children[1]);
@@ -1123,13 +1274,10 @@
         }
 
         function showProductionDetails() {
-            console.log("Viewing full production schedule...");
+            console.log("Viewing full production schedule for Recellion...");
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-info';
-            alertDiv.style.backgroundColor = 'rgba(173, 216, 230, 0.3)';
-            alertDiv.style.borderColor = 'rgba(70, 130, 180, 0.3)';
-            alertDiv.style.color = '#2F4F4F';
-            alertDiv.innerHTML = '<span class="alert-icon">ℹ️</span><span>Detailed production schedule coming soon!</span>';
+            alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-info-circle"></i></span><span>Detailed Recellion production schedule coming soon!</span>';
             
             const logisticsSection = document.getElementById('logistics');
             logisticsSection.insertBefore(alertDiv, logisticsSection.children[1]);
@@ -1137,13 +1285,10 @@
         }
 
         function manageSchedule() {
-            console.log("Managing schedule...");
+            console.log("Managing schedule for Recellion...");
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-info';
-            alertDiv.style.backgroundColor = 'rgba(173, 216, 230, 0.3)';
-            alertDiv.style.borderColor = 'rgba(70, 130, 180, 0.3)';
-            alertDiv.style.color = '#2F4F4F';
-            alertDiv.innerHTML = '<span class="alert-icon">ℹ️</span><span>Opening schedule management interface.</span>';
+            alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-info-circle"></i></span><span>Opening Recellion schedule management interface.</span>';
             
             const logisticsSection = document.getElementById('logistics');
             logisticsSection.insertBefore(alertDiv, logisticsSection.children[1]);
@@ -1151,10 +1296,10 @@
         }
 
         function sendReminders() {
-            console.log("Sending reminders...");
+            console.log("Sending reminders for Recellion appointments...");
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-success';
-            alertDiv.innerHTML = '<span class="alert-icon">✉️</span><span>Reminders sent successfully!</span>';
+            alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-envelope"></i></span><span>Reminders sent successfully for Recellion appointments!</span>';
             
             const logisticsSection = document.getElementById('logistics');
             logisticsSection.insertBefore(alertDiv, logisticsSection.children[1]);
@@ -1162,13 +1307,10 @@
         }
 
         function viewFullMonitoring() {
-            console.log("Viewing full monitoring log...");
+            console.log("Viewing full monitoring log for Recellion...");
             const alertDiv = document.createElement('div');
             alertDiv.className = 'alert alert-info';
-            alertDiv.style.backgroundColor = 'rgba(173, 216, 230, 0.3)';
-            alertDiv.style.borderColor = 'rgba(70, 130, 180, 0.3)';
-            alertDiv.style.color = '#2F4F4F';
-            alertDiv.innerHTML = '<span class="alert-icon">ℹ️</span><span>Loading comprehensive monitoring data.</span>';
+            alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-info-circle"></i></span><span>Loading comprehensive monitoring data for Recellion.</span>';
             
             const monitoringSection = document.getElementById('monitoring');
             monitoringSection.insertBefore(alertDiv, monitoringSection.children[1]);
@@ -1181,10 +1323,10 @@
             const severity = document.querySelector('#monitoring input[placeholder="Enter severity (1=mild, 5=severe)"]').value;
 
             if (patientId && symptom && severity) {
-                console.log(`Submitting symptom report for ${patientId}: ${symptom} (Severity: ${severity})`);
+                console.log(`Submitting symptom report for ${patientId} (Recellion): ${symptom} (Severity: ${severity})`);
                 const alertDiv = document.createElement('div');
                 alertDiv.className = 'alert alert-success';
-                alertDiv.innerHTML = '<span class="alert-icon">✅</span><span>Symptom report submitted successfully!</span>';
+                alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-check-circle"></i></span><span>Symptom report submitted successfully for Recellion patient!</span>';
                 
                 const monitoringSection = document.getElementById('monitoring');
                 monitoringSection.insertBefore(alertDiv, monitoringSection.children[1]);
@@ -1198,12 +1340,37 @@
             } else {
                 const alertDiv = document.createElement('div');
                 alertDiv.className = 'alert alert-warning';
-                alertDiv.innerHTML = '<span class="alert-icon">⚠️</span><span>Please fill in all symptom report fields.</span>';
+                alertDiv.innerHTML = '<span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span><span>Please fill in all symptom report fields.</span>';
                 
                 const monitoringSection = document.getElementById('monitoring');
                 monitoringSection.insertBefore(alertDiv, monitoringSection.children[1]);
                 setTimeout(() => alertDiv.remove(), 3000);
             }
+        }
+
+        // Recellion's cost calculator function
+        function calculateCost() {
+            const traditionalCost = parseInt(document.getElementById('traditional-cost').value) || 25000;
+            const years = parseInt(document.getElementById('years').value) || 10;
+            const cartCost = parseInt(document.getElementById('cart-cost').value) || 50000;
+            
+            const totalTraditional = traditionalCost * years;
+            const savings = totalTraditional - cartCost;
+            
+            document.getElementById('savings').textContent = savings.toLocaleString();
+            document.getElementById('cost-result').style.display = 'block';
+        }
+
+        // Recellion's treatment process demo function
+        function showTreatmentProcess() {
+            const result = document.getElementById('treatment-process');
+            const progress = document.getElementById('treatment-progress');
+            
+            result.style.display = 'block';
+            
+            setTimeout(() => {
+                progress.style.width = '100%';
+            }, 100);
         }
     </script>
 </body>
