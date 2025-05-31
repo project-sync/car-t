@@ -15,7 +15,8 @@
 
         body {
             font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fffaf0 0%, #ffeec2 100%); /* Lighter orange/cream background */
+            /* Lighter background with pink/purple/orange hints */
+            background: linear-gradient(135deg, #fce4ec 0%, #e1bee7 50%, #fff3e0 100%);
             min-height: 100vh;
             color: #334155;
         }
@@ -30,7 +31,7 @@
             width: 280px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
-            border-right: 1px solid rgba(255, 165, 0, 0.2); /* Orange border */
+            border-right: 1px solid rgba(255, 105, 180, 0.2); /* Hot pink border */
             padding: 2rem 1rem;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
@@ -40,26 +41,47 @@
             text-align: center;
             margin-bottom: 2.5rem;
             padding: 1rem;
-            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
+            /* Gradient from the presentation image */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet */
             border-radius: 16px;
             color: white;
             transform: translateZ(0);
             transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
-        .logo:hover {
-            transform: translateY(-2px);
+        .logo-icon {
+            font-size: 2.5rem;
+            font-weight: bold;
+            /* Using a Unicode character to represent the 'T' in a circle */
+            /* This is a simple representation. For exact logo, an SVG would be needed. */
+            color: white; /* Will be clipped by text-fill-color */
+            background: linear-gradient(45deg, #ff69b4, #ffa500); /* Pink to Orange gradient for the icon */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo h1 {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0; /* Adjusted for inline display */
+            background: linear-gradient(45deg, #ffa500, #ff69b4); /* Orange to Pink gradient for text */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .logo p {
             opacity: 0.9;
             font-size: 0.85rem;
+            color: white; /* Ensure subtitle is visible */
+            margin-top: 0.5rem;
+        }
+
+        .logo:hover {
+            transform: translateY(-2px);
         }
 
         .nav-menu {
@@ -84,15 +106,15 @@
         }
 
         .nav-link:hover {
-            background: rgba(255, 140, 0, 0.08); /* Dark Orange hover color */
-            color: #FF8C00; /* Dark Orange color */
+            background: rgba(255, 105, 180, 0.08); /* Hot pink hover color */
+            color: #ff69b4; /* Hot pink color */
             transform: translateX(4px);
         }
 
         .nav-link.active {
-            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             color: white;
-            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
             transform: translateX(4px);
         }
 
@@ -120,7 +142,7 @@
             border-radius: 20px;
             padding: 2rem;
             margin-bottom: 2rem;
-            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
+            border: 1px solid rgba(255, 105, 180, 0.1); /* Hot pink border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
@@ -169,7 +191,7 @@
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2rem;
-            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
+            border: 1px solid rgba(255, 105, 180, 0.1); /* Hot pink border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -183,7 +205,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #FF8C00, #FF4500, #FFD700); /* Orange gradient */
+            background: linear-gradient(90deg, #ff69b4, #8a2be2, #ffa500); /* Pink, Purple, Orange gradient */
             transform: scaleX(0);
             transition: transform 0.3s ease;
         }
@@ -204,13 +226,13 @@
         }
 
         .card-icon {
-            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             border-radius: 16px;
             padding: 1rem;
             margin-right: 1rem;
             font-size: 1.5rem;
             color: white;
-            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -262,7 +284,7 @@
         .progress-bar {
             width: 100%;
             height: 12px;
-            background: rgba(255, 165, 0, 0.2); /* Lighter orange background */
+            background: rgba(255, 105, 180, 0.2); /* Light pink background */
             border-radius: 8px;
             overflow: hidden;
             margin: 1rem 0;
@@ -271,7 +293,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(90deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             border-radius: 8px;
             transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
@@ -296,8 +318,8 @@
         /* Buttons */
         .btn {
             background: rgba(255, 255, 255, 0.8);
-            color: #FF8C00; /* Dark Orange color */
-            border: 1px solid rgba(255, 140, 0, 0.2);
+            color: #ff69b4; /* Hot pink color */
+            border: 1px solid rgba(255, 105, 180, 0.2);
             padding: 0.8rem 1.5rem;
             border-radius: 12px;
             cursor: pointer;
@@ -310,22 +332,22 @@
         }
 
         .btn:hover {
-            background: #FF8C00; /* Dark Orange color */
+            background: #ff69b4; /* Hot pink color */
             color: white;
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             color: white;
             border: none;
-            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
         }
 
         /* Dashboard specific styles */
@@ -341,7 +363,7 @@
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2rem;
-            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
+            border: 1px solid rgba(255, 105, 180, 0.1); /* Hot pink border */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             height: 320px;
             display: flex;
@@ -363,11 +385,11 @@
         }
 
         .patient-item {
-            background: rgba(255, 250, 240, 0.8); /* Lighter cream background */
+            background: rgba(252, 228, 236, 0.8); /* Lighter pink background */
             border-radius: 12px;
             padding: 1.2rem;
             margin-bottom: 1rem;
-            border: 1px solid rgba(255, 165, 0, 0.1); /* Orange border */
+            border: 1px solid rgba(255, 105, 180, 0.1); /* Hot pink border */
             transition: all 0.3s ease;
             cursor: pointer;
         }
@@ -408,7 +430,7 @@
             width: 100%;
             padding: 1rem;
             border-radius: 12px;
-            border: 1px solid rgba(255, 165, 0, 0.3); /* Orange border */
+            border: 1px solid rgba(255, 105, 180, 0.3); /* Hot pink border */
             background: rgba(255, 255, 255, 0.8);
             color: #374151;
             backdrop-filter: blur(10px);
@@ -418,9 +440,9 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #FF8C00; /* Dark Orange color */
+            border-color: #ff69b4; /* Hot pink color */
             background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+            box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
         }
 
         .form-input::placeholder {
@@ -457,9 +479,9 @@
         }
 
         .alert-info {
-            background: rgba(255, 215, 0, 0.3); /* Gold color for info */
-            border-color: rgba(255, 165, 0, 0.3); /* Orange border for info */
-            color: #8B4513; /* SaddleBrown for text */
+            background: rgba(225, 190, 231, 0.3); /* Light purple for info */
+            border-color: rgba(138, 43, 226, 0.3); /* Blue Violet border for info */
+            color: #4b0082; /* Indigo for text */
         }
 
         .alert-icon {
@@ -469,18 +491,18 @@
 
         /* Education section */
         .education-video {
-            background: rgba(255, 165, 0, 0.05); /* Light orange background */
+            background: rgba(138, 43, 226, 0.05); /* Light purple background */
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
             margin-bottom: 1rem;
-            border: 2px dashed rgba(255, 165, 0, 0.3); /* Orange dashed border */
+            border: 2px dashed rgba(138, 43, 226, 0.3); /* Blue Violet dashed border */
             transition: all 0.3s ease;
         }
 
         .education-video:hover {
-            border-color: #FF8C00; /* Dark Orange color */
-            background: rgba(255, 140, 0, 0.05); /* Dark Orange color */
+            border-color: #8a2be2; /* Blue Violet color */
+            background: rgba(138, 43, 226, 0.08); /* Blue Violet color */
         }
 
         .video-placeholder {
@@ -498,7 +520,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: #1e293b;
-            background: linear-gradient(135deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
@@ -537,7 +559,7 @@
 
         /* Recellion's interactive elements */
         .interactive-demo {
-            background: #fffaf0; /* Lighter cream background */
+            background: #fce4ec; /* Lighter pink background */
             padding: 60px 0;
             text-align: center;
             border-radius: 20px;
@@ -545,7 +567,7 @@
         }
 
         .demo-button {
-            background: linear-gradient(45deg, #FF8C00, #FF4500); /* Orange gradient */
+            background: linear-gradient(45deg, #ff69b4, #8a2be2); /* Hot Pink to Blue Violet gradient */
             color: white;
             border: none;
             padding: 15px 30px;
@@ -558,7 +580,7 @@
 
         .demo-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
         }
 
         .demo-result {
@@ -585,7 +607,7 @@
             align-items: center;
             margin: 1rem 0;
             padding: 1rem;
-            background: #fffaf0; /* Lighter cream background */
+            background: #fce4ec; /* Lighter pink background */
             border-radius: 10px;
         }
 
@@ -599,12 +621,79 @@
         }
 
         .calculator-result {
-            background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%); /* Orange gradient */
+            background: linear-gradient(135deg, #ff69b4 0%, #8a2be2 100%); /* Hot Pink to Blue Violet gradient */
             color: white;
             padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
             margin-top: 1rem;
+        }
+
+        /* Treatment Process Demo specific styles */
+        .treatment-process-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .treatment-step-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 105, 180, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .treatment-step-card.active {
+            display: block;
+        }
+
+        .treatment-step-card .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .treatment-step-card .step-icon {
+            background: linear-gradient(135deg, #ff69b4, #8a2be2);
+            border-radius: 50%;
+            padding: 0.8rem;
+            margin-right: 1rem;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
+        }
+
+        .treatment-step-card h3 {
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .treatment-step-card p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .treatment-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .step-indicator-text {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #64748b;
         }
 
         /* Responsive adjustments */
@@ -626,6 +715,10 @@
             .cards-grid {
                 grid-template-columns: 1fr;
             }
+
+            .treatment-step-card {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -633,7 +726,7 @@
     <div class="app-container">
         <aside class="sidebar">
             <div class="logo">
-                <h1>Recellion</h1>
+                <span class="logo-icon">&#x24C9;</span> <h1>Recellion</h1>
                 <p>ImmunoReset Digital Platform</p>
             </div>
             <nav>
@@ -690,6 +783,24 @@
                         <a href="#" class="nav-link" onclick="showSection('treatment_process_demo')">
                             <span class="nav-icon"><i class="fas fa-microscope"></i></span>
                             Treatment Process Demo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showSection('marketing_objectives')">
+                            <span class="nav-icon"><i class="fas fa-bullseye"></i></span>
+                            Marketing Objectives
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showSection('budget_analysis')">
+                            <span class="nav-icon"><i class="fas fa-dollar-sign"></i></span>
+                            Budget Analysis
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="showSection('key_partners')">
+                            <span class="nav-icon"><i class="fas fa-handshake"></i></span>
+                            Key Partners
                         </a>
                     </li>
                 </ul>
@@ -769,7 +880,7 @@
                     <div class="chart-container">
                         <h3 style="margin-bottom: 1rem; color: #1e293b;">Treatment Journey Progress</h3>
                         <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Visual timeline of patient therapy stages for Recellion</p>
-                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #ffe0b2, #ffd700); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #a0522d;">
+                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #ffb3ba, #ffdfba); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #c2185b;">
                             📊 Treatment Journey Chart Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">View Full Timeline</button>
@@ -777,7 +888,7 @@
                     <div class="chart-container">
                         <h3 style="margin-bottom: 1rem; color: #1e293b;">Toxicity Trend Analysis</h3>
                         <p style="color: #64748b; text-align: center; margin-bottom: 1rem;">Aggregate view of adverse event reporting for Recellion</p>
-                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #ffdab9, #ffa07a); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #8b4513;">
+                        <div style="width: 100%; height: 150px; background: linear-gradient(135deg, #e0b3ff, #c780ff); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #6a008a;">
                             🛡️ Adverse Event Graph Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Detailed Safety Report</button>
@@ -947,7 +1058,7 @@
                                 <div class="patient-details">
                                     Status: 1-Month Post-Infusion<br>
                                     Symptoms: Mild fatigue<br>
-                                    <span class="status-indicator status-green">Stable, Routine Monitoring</span>
+                                    <span class="status-indicator status-green">Stabil, Routine Monitoring</span>
                                 </div>
                             </li>
                         </ul>
@@ -984,7 +1095,7 @@
                     <div class="card">
                         <h3>Long-Term Remission Rates</h3>
                         <p>Track sustained remission in SLE and RA patients post-Recellion ImmunoReset.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffe0b2, #ffd700); color: #a0522d;">
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffb3ba, #ffdfba); color: #c2185b;">
                             📊 Remission Rate Chart Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Generate Report</button>
@@ -992,15 +1103,15 @@
                     <div class="card">
                         <h3>Adverse Event Trends</h3>
                         <p>Analyze patterns and frequency of CAR-T related toxicities for Recellion.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffdab9, #ffa07a); color: #8b4513;">
-                            📈 AE Trend Chart Placeholder
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #e0b3ff, #c780ff); color: #6a008a;">
+                            🛡️ Adverse Event Graph Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">View Detailed Analysis</button>
                     </div>
                     <div class="card">
                         <h3>Patient Reported Outcomes (PROs)</h3>
                         <p>Aggregate patient quality of life and symptom burden data for Recellion patients.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffe0b2, #ffd700); color: #a0522d;">
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffb3ba, #ffdfba); color: #c2185b;">
                             📝 PROs Data Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Access PRO Dashboard</button>
@@ -1008,7 +1119,7 @@
                     <div class="card">
                         <h3>Cost-Effectiveness Modeling</h3>
                         <p>Comparative analysis of Recellion ImmunoReset vs. lifelong biologics.</p>
-                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #ffdab9, #ffa07a); color: #8b4513;">
+                        <div class="chart-container" style="height: 200px; background: linear-gradient(135deg, #e0b3ff, #c780ff); color: #6a008a;">
                             💰 Cost Model Placeholder
                         </div>
                         <button class="btn btn-primary" style="margin-top: 1rem;">Run Simulations</button>
@@ -1164,6 +1275,109 @@
                 </div>
             </section>
 
+            <section id="marketing_objectives" class="content-section">
+                <div class="header">
+                    <h2>Marketing Objectives: Years 1 & 2</h2>
+                    <p>Key goals and targets for Recellion's market penetration and expansion.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Year 1 Objectives</h3>
+                        <ul>
+                            <li>Market Penetration: 25 certified CAR-T centers in 8 EU countries</li>
+                            <li>Physician Adoption: Train 150 rheumatologists/immunologists</li>
+                            <li>Patient Treatment: Treat 200 patients (120 RA, 80 SLE)</li>
+                            <li>Market Awareness: 70% awareness among target physicians</li>
+                            <li>Reimbursement: Secure favorable decisions in Germany, France, UK</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Year 2 Objectives</h3>
+                        <ul>
+                            <li>Market Expansion: 50 certified centers in 12 EU countries</li>
+                            <li>Physician Network: Train additional 200 physicians (350 total)</li>
+                            <li>Patient Volume: Treat 500 patients annually (300 RA, 200 SLE)</li>
+                            <li>Market Leadership: 40% market share in eligible population</li>
+                            <li>Evidence Generation: Publish 2-year durability data</li>
+                            <li>Pipeline Development: Initiate Phase II studies in additional indications</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="budget_analysis" class="content-section">
+                <div class="header">
+                    <h2>Phase 2 & 3 Budget Analysis</h2>
+                    <p>Estimated costs for clinical trial execution, manufacturing, and regulatory affairs.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Phase 2 (100 Patients) - Estimated Cost: $16,847,000</h3>
+                        <ul>
+                            <li>Clinical Trial Execution: $12,000,000</li>
+                            <li>Investigational Product (IP) Manufacturing: $397,000</li>
+                            <li>Regulatory Affairs: $1,000,000</li>
+                            <li>Quality Assurance & Control: $500,000</li>
+                            <li>Data Management & Biostatistics: $800,000</li>
+                            <li>Medical Monitoring & Safety Reporting: $600,000</li>
+                            <li>Insurance & Legal: $200,000</li>
+                            <li>Contingency (10%): $1,350,000</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Phase 3 (300 Patients) - Estimated Cost: $49,791,000</h3>
+                        <ul>
+                            <li>Clinical Trial Execution: $36,000,000</li>
+                            <li>Investigational Product (IP) Manufacturing: $1,191,000</li>
+                            <li>Regulatory Affairs: $2,000,000</li>
+                            <li>Quality Assurance & Control: $1,500,000</li>
+                            <li>Data Management & Biostatistics: $2,500,000</li>
+                            <li>Medical Monitoring & Safety Reporting: $2,000,000</li>
+                            <li>Insurance & Legal: $600,000</li>
+                            <li>Contingency (10%): $4,000,000</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" style="max-width: 800px; margin: 2rem auto;">
+                    <h3>Fully-Loaded Production Cost per Patient</h3>
+                    <p style="font-size: 1.2rem; font-weight: bold; text-align: center;">≈ $3,970</p>
+                    <p style="text-align: center; color: #64748b;">(Includes mRNA reagents, lipids, encapsulation, QC, fill-finish, stability study, and process development with 15% contingency)</p>
+                </div>
+            </section>
+
+            <section id="key_partners" class="content-section">
+                <div class="header">
+                    <h2>Key Partners</h2>
+                    <p>Strategic collaborations essential for Recellion's success.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Academic and Clinical Research Centers</h3>
+                        <p>Collaborate for clinical trials, patient recruitment, and translational research in rheumatology, nephrology, and immunology.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Contract Manufacturing Organizations (CMOs)</h3>
+                        <p>Partner with GMP-certified facilities for scalable and compliant production of allogeneic CAR-T cell products.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Biotech and Pharma Companies</h3>
+                        <p>Form alliances for technology licensing, co-development, and access to CAR constructs or gene-editing platforms.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Patient Advocacy Groups</h3>
+                        <p>Engage with lupus and rheumatoid arthritis organizations for patient-centric development and clinical trial enrollment.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Regulatory Consultants</h3>
+                        <p>Collaborate with experts to manage IND, BLA, and EMA submissions and stay compliant with cell therapy regulations.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Technology Providers</h3>
+                        <p>Partner for viral vector production, gene-editing tools (e.g., TALEN, CRISPR), and cell expansion technologies.</p>
+                    </div>
+                </div>
+            </section>
+
             <section id="cost_comparison" class="content-section">
                 <div class="header">
                     <h2>Treatment Cost Comparison</h2>
@@ -1195,25 +1409,25 @@
                     <p>Explore the mRNA-LNP CAR-T Treatment Process step-by-step.</p>
                 </div>
 
-                <div style="margin-top: 3rem; text-align: center;">
-                    <button class="demo-button" onclick="showTreatmentProcess()">Show Treatment Process</button>
-                    <div class="demo-result" id="treatment-process">
-                        <h3>mRNA-LNP CAR-T Treatment Process</h3>
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="treatment-progress"></div>
+                <div class="treatment-process-container">
+                    <div id="treatment-steps-display">
                         </div>
-                        <div id="treatment-steps">
-                            <p><strong>Step 1:</strong> Nanoparticles deliver αCD19-CAR and αCD8 to T cells</p>
-                            <p><strong>Step 2:</strong> T cells initiate CAR expression in the nucleus</p>
-                            <p><strong>Step 3:</strong> Autoreactive cells are targeted and eliminated</p>
-                            <p><strong>Result:</strong> Immune system is reset, achieving potential remission</p>
-                        </div>
+                    <div class="step-indicator-text" id="step-indicator"></div>
+                    <div class="treatment-navigation">
+                        <button class="btn" id="prev-step-btn" onclick="prevStep()" disabled>Previous Step</button>
+                        <button class="btn btn-primary" id="next-step-btn" onclick="nextStep()">Next Step</button>
                     </div>
                 </div>
             </section>
 
         </main>
     </div>
+
+    <footer>
+        <div style="text-align: center; padding: 1rem; background: #333; color: white; font-size: 0.85rem;">
+            Developed by Ugur Ersoz
+        </div>
+    </footer>
 
     <script>
         // Function to show the selected section and update active link
@@ -1240,6 +1454,11 @@
             const activeLink = document.querySelector(`.nav-link[onclick*="showSection('${sectionId}')"]`);
             if (activeLink) {
                 activeLink.classList.add('active');
+            }
+
+            // If navigating to the treatment process demo, initialize it
+            if (sectionId === 'treatment_process_demo') {
+                initializeTreatmentProcessDemo();
             }
         }
 
@@ -1361,17 +1580,88 @@
             document.getElementById('cost-result').style.display = 'block';
         }
 
-        // Recellion's treatment process demo function
-        function showTreatmentProcess() {
-            const result = document.getElementById('treatment-process');
-            const progress = document.getElementById('treatment-progress');
-            
-            result.style.display = 'block';
-            
-            setTimeout(() => {
-                progress.style.width = '100%';
-            }, 100);
+        // Treatment Process Demo Logic
+        let currentStepIndex = 0;
+        const treatmentSteps = [
+            {
+                title: "Step 1: T-cell Collection",
+                description: "Patient's T-cells are collected through leukapheresis.",
+                icon: "fas fa-tint" // Blood bag icon
+            },
+            {
+                title: "Step 2: Engineer-Reprogram (mRNA-LNP Delivery)",
+                description: "Nanoparticles deliver $\\alpha$CD19-CAR and $\\alpha$CD8 mRNA to T cells, which then initiate CAR expression in the nucleus.",
+                icon: "fas fa-dna" // DNA/molecule icon
+            },
+            {
+                title: "Step 3: Expansion",
+                description: "Engineered T-cells expand in number.",
+                icon: "fas fa-plus-circle" // Growth icon
+            },
+            {
+                title: "Step 4: Chemotherapy & Infusion",
+                description: "Patient receives preconditioning chemotherapy, followed by infusion of the engineered CAR-T cells.",
+                icon: "fas fa-syringe" // Infusion icon
+            },
+            {
+                title: "Step 5: Cells Destroyed (Death of autoreactive cells)",
+                description: "CAR-T cells target and eliminate autoreactive B cells, leading to immune system reset.",
+                icon: "fas fa-times-circle" // Destruction/elimination icon
+            }
+        ];
+
+        function initializeTreatmentProcessDemo() {
+            currentStepIndex = 0; // Start from the first step
+            renderStep(currentStepIndex);
         }
+
+        function renderStep(index) {
+            const displayContainer = document.getElementById('treatment-steps-display');
+            displayContainer.innerHTML = ''; // Clear previous step
+
+            const step = treatmentSteps[index];
+            const stepCard = document.createElement('div');
+            stepCard.className = 'treatment-step-card active';
+            stepCard.innerHTML = `
+                <div class="step-header">
+                    <div class="step-icon"><i class="${step.icon}"></i></div>
+                    <h3>${step.title}</h3>
+                </div>
+                <p>${step.description}</p>
+            `;
+            displayContainer.appendChild(stepCard);
+
+            // Update step indicator text
+            document.getElementById('step-indicator').textContent = `Step ${index + 1} of ${treatmentSteps.length}`;
+
+            // Update button states
+            document.getElementById('prev-step-btn').disabled = index === 0;
+            document.getElementById('next-step-btn').disabled = index === treatmentSteps.length - 1;
+        }
+
+        function nextStep() {
+            if (currentStepIndex < treatmentSteps.length - 1) {
+                currentStepIndex++;
+                renderStep(currentStepIndex);
+            }
+        }
+
+        function prevStep() {
+            if (currentStepIndex > 0) {
+                currentStepIndex--;
+                renderStep(currentStepIndex);
+            }
+        }
+
+        // Initial render when the page loads (or when the section is shown)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Check if the treatment_process_demo section is active on load
+            const initialSection = document.querySelector('.content-section.active');
+            if (initialSection && initialSection.id === 'treatment_process_demo') {
+                initializeTreatmentProcessDemo();
+            }
+        });
+
     </script>
 </body>
 </html>
